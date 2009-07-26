@@ -13,6 +13,7 @@ namespace :db do
       Fixtures.create_fixtures("#{SiteExtension.root}/db/sample", File.basename(fixture_file, '.*'))
     end
   end
+end
 
 namespace :spree do
   namespace :extensions do
