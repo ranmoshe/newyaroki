@@ -1,0 +1,4 @@
+normal_delivery:
+  name: משלוח בדואר רשום
+  zone: available_shipping
+  shipping_calculator: Spree::FlatRateShipping::Calculator

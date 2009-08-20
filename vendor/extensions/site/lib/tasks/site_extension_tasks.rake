@@ -1,3 +1,5 @@
+require 'active_record/fixtures'
+
 namespace :db do
   desc "Bootstrap your database for Spree."
   task :bootstrap  => :environment do
@@ -12,6 +14,22 @@ namespace :db do
       say fixture_file + ' is the current file in bootstrap'
       Fixtures.create_fixtures("#{SiteExtension.root}/db/sample", File.basename(fixture_file, '.*'))
     end
+  end
+
+  desc "Seed prod data"
+  task :init_prod  => :environment do
+    # load initial database fixtures into the current environment's database
+    ActiveRecord::Base.establish_connection(RAILS_ENV.to_sym)
+    ActiveRecord::Base.connection.tables.each do |t|
+      ActiveRecord::Base.connection.delete_sql("delete from #{t}") unless ["schema_migrations"].include?(t)
+    end
+    Dir.glob(File.join(SiteExtension.root, "db", 'init_prod', '*.{yml,csv}')).each do |fixture_file|
+      # say fixture_file + ' is the current file in migration'
+      Fixtures.create_fixtures("#{SiteExtension.root}/db/init_prod/", File.basename(fixture_file, '.*'))
+    end
+    s = Spree::Setup.new
+    s.create_admin_user('raniyoti', 'rani.moshe@gmail.com')
+    s.create_admin_user('yotirani', 'yotuina@gmail.com')
   end
 end
 
