@@ -1,6 +1,3 @@
-size:
-  name: tshirt-size
-  presentation: Size
-color:
-  name: tshirt-color
-  presentation: Color
+wilkinet_strap_length:
+  name: strap-length
+  presentation: אורך רצועה

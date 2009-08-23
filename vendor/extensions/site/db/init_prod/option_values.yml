@@ -1,35 +1,10 @@
-s:
-  name: Small
-  presentation: S
+regular:
+  name: Regular
+  presentation: רגיל
   position: 1
-  option_type: size
-m:
-  name: Medium
-  presentation: M
+  option_type: wilkinet_strap_length
+extra_long:
+  name: ExtraLong
+  presentation: ארוך
   position: 2
-  option_type: size
-l:
-  name: Large
-  presentation: L
-  position: 3
-  option_type: size
-xl:
-  name: Extra Large
-  presentation: XL
-  position: 4
-  option_type: size
-red:
-  name: Red
-  presentation: Red
-  position: 1
-  option_type: color
-green:
-  name: Green
-  presentation: Green
-  position: 2
-  option_type: color
-blue:
-  name: Blue
-  presentation: Blue
-  position: 3
-  option_type: color
+  option_type: wilkinet_strap_length

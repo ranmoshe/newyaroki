@@ -1,8 +1,12 @@
-baseball_size:
-  product: ror_baseball_jersey
-  option_type: size
+organic_cotton_brown_denim_sl:
+  product: organic_cotton_brown_denim
+  option_type: wilkinet_strap_length
   position: 1
-baseball_color:
-  product: ror_baseball_jersey
-  option_type: color
-  position: 2
+soft_cord_navy_sl:
+  product: soft_cord_aubergine
+  option_type: wilkinet_strap_length
+  position: 1
+twill_cotton_navy_sl:
+  product: twill_cotton_navy
+  option_type: wilkinet_strap_length
+  position: 1

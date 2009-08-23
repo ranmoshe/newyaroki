@@ -1,6 +1,3 @@
 available_shipping:
-  name: North America
-  description: USA + Canada
-one_ship_option:
-  name: one with one shipping option 
-  description: one with one shipping option 
+  name: Israel
+  description: Israel
