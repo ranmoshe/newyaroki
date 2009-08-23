@@ -86,7 +86,3 @@ Time::DATE_FORMATS[:date_time24] = "%Y-%m-%d %H:%M"
 # Mime::Type.register "application/x-mobile", :mobile
 
 # Include your application configuration below
-# allow orders with products with no inventory - so we don't have to maintain inventory 
-  config.show_zero_stock_products = :true
-  config.allow_backorders = :true
-
