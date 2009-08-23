@@ -1,8 +1,24 @@
-img_organic_cotton:
+img_organic_cotton_brown_denim:
   id: 1
-  viewable: organic_cotton
+  viewable: organic_cotton_brown_denim
   viewable_type: Product
   attachment_content_type: image/jpg
-  attachment_file_name: wilkinet_brown_denim.jpeg 
+  attachment_file_name: wilkinet_brown_denim.jpg 
+  type: Image  
+  position: 1
+img_soft_cord_aubergine:
+  id: 2
+  viewable: soft_cord_aubergine
+  viewable_type: Product
+  attachment_content_type: image/jpg
+  attachment_file_name: wilkinet_aubergine.jpg 
+  type: Image  
+  position: 1
+img_twill_cotton_navy:
+  id: 3
+  viewable: twill_cotton_navy
+  viewable_type: Product
+  attachment_content_type: image/jpg
+  attachment_file_name: wilkinet_navy.jpg 
   type: Image  
   position: 1
