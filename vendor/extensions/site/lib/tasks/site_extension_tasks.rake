@@ -5,6 +5,7 @@ namespace :db do
   desc "Seed prod data"
   task :init_prod  => :environment do
     # load initial database fixtures into the current environment's database
+    RAILS_ENV = ENV["RAILS_ENV"] unless ENV["RAILS_ENV"].nil?
     ActiveRecord::Base.establish_connection(RAILS_ENV.to_sym)
     ActiveRecord::Base.connection.tables.each do |t|
       ActiveRecord::Base.connection.delete_sql("delete from #{t}") unless ["schema_migrations"].include?(t)
