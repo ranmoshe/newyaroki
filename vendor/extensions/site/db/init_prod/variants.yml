@@ -1,15 +1,30 @@
-organic_cotton_brown_denim:
+organic_cotton_brown_denim_01:
   product: organic_cotton_brown_denim
-  option_values: regular, extra_long
+  option_values: regular
   sku: WIL-0001
   price: 19.99
-soft_cord_aubergine:
+organic_cotton_brown_denim_02:
+  product: organic_cotton_brown_denim
+  option_values: extra_long
+  sku: WIL-0002
+  price: 19.99
+soft_cord_aubergine_01:
   product: soft_cord_aubergine
-  option_values: regular, extra_long
-  sku: WIL-0001
+  option_values: regular
+  sku: WIL-0003
   price: 19.99
-twill_cotton_navy:
+soft_cord_aubergine_02:
+  product: soft_cord_aubergine
+  option_values: extra_long
+  sku: WIL-0004
+  price: 19.99
+twill_cotton_navy_01:
   product: twill_cotton_navy
-  option_values: regular, extra_long
-  sku: WIL-0001
+  option_values: regular
+  sku: WIL-0005
+  price: 19.99
+twill_cotton_navy_02:
+  product: twill_cotton_navy
+  option_values: extra_long
+  sku: WIL-0006
   price: 19.99
