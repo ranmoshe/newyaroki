@@ -82,8 +82,8 @@ ActiveRecord::Schema.define(:version => 20090705101511) do
 
   create_table "creditcard_txns", :force => true do |t|
     t.integer  "creditcard_payment_id"
-    t.decimal  "amount",                               :default => 0.0, :null => false
-    t.integer  "txn_type",              :limit => 255
+    t.decimal  "amount",                :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.integer  "txn_type"
     t.string   "response_code"
     t.text     "avs_response"
     t.text     "cvv_response"
@@ -92,10 +92,10 @@ ActiveRecord::Schema.define(:version => 20090705101511) do
   end
 
   create_table "creditcards", :force => true do |t|
-    t.text     "number",             :limit => 255
+    t.text     "number"
     t.string   "month"
     t.string   "year"
-    t.text     "verification_value", :limit => 255
+    t.text     "verification_value"
     t.string   "cc_type"
     t.string   "display_number"
     t.string   "first_name"
@@ -204,13 +204,13 @@ ActiveRecord::Schema.define(:version => 20090705101511) do
   create_table "orders", :force => true do |t|
     t.integer  "user_id"
     t.string   "number",       :limit => 15
-    t.decimal  "item_total",                                               :default => 0.0, :null => false
-    t.decimal  "total",                                                    :default => 0.0, :null => false
+    t.decimal  "item_total",                 :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.decimal  "total",                      :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "state"
     t.string   "token"
-    t.decimal  "charge_total",                                             :default => 0.0, :null => false
+    t.decimal  "charge_total",               :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.decimal  "credit_total",               :precision => 8, :scale => 2, :default => 0.0, :null => false
   end
 
@@ -220,7 +220,7 @@ ActiveRecord::Schema.define(:version => 20090705101511) do
     t.integer  "order_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "amount",        :default => 0.0, :null => false
+    t.decimal  "amount",        :precision => 8, :scale => 2, :default => 0.0, :null => false
     t.integer  "creditcard_id"
     t.string   "type"
   end
@@ -255,9 +255,9 @@ ActiveRecord::Schema.define(:version => 20090705101511) do
   end
 
   create_table "products", :force => true do |t|
-    t.string   "name",                 :default => "", :null => false
+    t.string   "name",                                               :default => "", :null => false
     t.text     "description"
-    t.decimal  "master_price"
+    t.decimal  "master_price",         :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "permalink"
@@ -362,7 +362,7 @@ ActiveRecord::Schema.define(:version => 20090705101511) do
 
   create_table "tax_rates", :force => true do |t|
     t.integer  "zone_id"
-    t.decimal  "amount"
+    t.decimal  "amount",          :precision => 8, :scale => 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "tax_type"

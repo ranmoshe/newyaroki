@@ -8,7 +8,7 @@ namespace :db do
     RAILS_ENV = ENV["RAILS_ENV"] unless ENV["RAILS_ENV"].nil?
     ActiveRecord::Base.establish_connection(RAILS_ENV.to_sym)
     ActiveRecord::Base.connection.tables.each do |t|
-      ActiveRecord::Base.connection.delete_sql("delete from #{t}") unless ["schema_migrations"].include?(t)
+      ActiveRecord::Base.connection.delete("delete from #{t}") unless ["schema_migrations"].include?(t)
     end
     Dir.glob(File.join(SiteExtension.root, "db", 'init_prod', '*.{yml,csv}')).each do |fixture_file|
       # say fixture_file + ' is the current file in migration'
