@@ -10,12 +10,21 @@ development:
   socket: /var/run/mysqld/mysqld.sock
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: mysql
+  encoding: utf8
+  database: yaroki_test
+  pool: 5
+  username: root
+  password: ranmoshe
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: mysql
+  encoding: utf8
+  database: ranmoshe_depot
+  pool: 5
+  username: ranmoshe_ranmosh
+  password: Z1u-at-n6879
                                     
 # special mode for demo.spreecommerce.com (you probably don't need this)                                    
 demo:
