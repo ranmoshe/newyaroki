@@ -1,4 +1,4 @@
-# Default database configuration
+# developement environment
 
 development:
   adapter: mysql
