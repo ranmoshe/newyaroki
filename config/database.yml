@@ -1,32 +1,24 @@
-# Default database configuration
-
+# production database configuration
 development:
   adapter: mysql
   encoding: utf8
-  database: yaroki_development
+  database: ranmoshe_yaroki
   pool: 5
-  username: root
-  password: ranmoshe
-  socket: /var/run/mysqld/mysqld.sock
+  username: ranmoshe_rani
+  password: yeledy@r0k
 
 test:
   adapter: mysql
   encoding: utf8
-  database: yaroki_test
+  database: ranmoshe_yaroki
   pool: 5
-  username: root
-  password: ranmoshe
-  socket: /var/run/mysqld/mysqld.sock
+  username: ranmoshe_rani
+  password: yeledy@r0k
 
 production:
   adapter: mysql
   encoding: utf8
-  database: ranmoshe_depot
+  database: ranmoshe_yaroki
   pool: 5
-  username: ranmoshe_ranmosh
-  password: Z1u-at-n6879
-                                    
-# special mode for demo.spreecommerce.com (you probably don't need this)                                    
-demo:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  username: ranmoshe_rani
+  password: yeledy@r0k
