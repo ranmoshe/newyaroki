@@ -2,3 +2,9 @@ db/development.sqlite3
 log/development.log
 public/javascripts/checkout.js
 *.swp
+db/production.sqlite3
+log
+public/htaccess.bak
+public/javascripts/jquery-and-plugins.js
+tmp
+
